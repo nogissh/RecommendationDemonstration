@@ -37,6 +37,9 @@ result = [[] for i in range(4)]
 for i, r in enumerate(pred):
   result[r].append(namelist[i])
 
+# out
+print(f'result => {result}')
+
 # out to file
 with open('result.json', 'w') as f:
   json.dump(result, f, indent=2)
