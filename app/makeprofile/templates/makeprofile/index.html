@@ -1,0 +1,28 @@
+{% extends 'makeprofile/base.html' %}
+
+{% block header %}
+<div id="header">
+<h1>AIと芸術</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!-- statement -->
+<div class="panel">
+<h1>ユーザプロファイルの作成</h1>
+<p>あなたの情報が必要です。</p>
+</div>
+<!-- /statement -->
+
+<!-- form -->
+<form action="{% url 'makeprofile:form' %}" method="get">
+<div class="panel tm8">
+<h2>あなたの名前</h2>
+<input type="text" name="name" placeholder="Your Name"/>
+<button class="tm8">次へ</button>
+</div>
+</form>
+<!-- /form -->
+
+{% endblock %}

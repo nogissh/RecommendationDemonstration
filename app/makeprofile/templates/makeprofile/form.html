@@ -1,0 +1,82 @@
+{% extends 'makeprofile/base.html' %}
+
+{% block header %}
+<div id="header">
+<h1>AIと芸術</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!-- statement -->
+<div class="panel">
+<h1>質問に回答</h1>
+<p>{{ content.name }}さんのプロフィールを完成させるために、いくつか質問に回答してください。</p>
+</div>
+<!-- /statement -->
+
+<!-- form -->
+<form action="{% url 'makeprofile:regist' %}" method="get">
+
+<div class="panel tm8">
+<h2>好きな食べもの</h2>
+<ul class="radiobox">
+  <li><input type="radio" name="q1" value="0">ラーメン</li>
+  <li><input type="radio" name="q1" value="1">パンケーキ</li>
+  <li><input type="radio" name="q1" value="2">シュークリーム</li>
+  <li><input type="radio" name="q1" value="3">パクチー</li>
+  <li><input type="radio" name="q1" value="4">なし</li>
+</ul> 
+</div>
+
+<div class="panel tm8">
+<h2>嫌いな食べ物</h2>
+<ul class="radiobox">
+  <li><input type="radio" name="q2" value="0">カレー</li>
+  <li><input type="radio" name="q2" value="1">パクチー</li>
+  <li><input type="radio" name="q2" value="2">ラーメン</li>
+  <li><input type="radio" name="q2" value="3">玄米</li>
+  <li><input type="radio" name="q2" value="4">なし</li>
+</ul> 
+</div>
+
+<div class="panel tm8">
+<h2>好きなお笑い芸人</h2>
+<ul class="radiobox">
+  <li><input type="radio" name="q3" value="0">ビートたけし</li>
+  <li><input type="radio" name="q3" value="1">明石家さんま</li>
+  <li><input type="radio" name="q3" value="2">みやぞん</li>
+  <li><input type="radio" name="q3" value="3">ありぞん</li>
+  <li><input type="radio" name="q3" value="4">なし</li>
+</ul> 
+</div>
+
+<div class="panel tm8">
+<h2>好きな音楽</h2>
+<ul class="radiobox">
+  <li><input type="radio" name="q4" value="0">ポップス</li>
+  <li><input type="radio" name="q4" value="1">ロック</li>
+  <li><input type="radio" name="q4" value="2">クラシック</li>
+  <li><input type="radio" name="q4" value="3">ダンス</li>
+  <li><input type="radio" name="q4" value="4">なし</li>
+</ul> 
+</div>
+
+<div class="panel tm8">
+<h2>プレッシャーを感じる人</h2>
+<ul class="radiobox">
+  <li><input type="radio" name="q5" value="0">大野木俊樹</li>
+  <li><input type="radio" name="q5" value="1">大野木俊樹</li>
+  <li><input type="radio" name="q5" value="2">大野木俊樹</li>
+  <li><input type="radio" name="q5" value="3">大野木俊樹</li>
+  <li><input type="radio" name="q5" value="4">大野木俊樹</li>
+</ul> 
+</div>
+
+<button class="tm8">確認</button>
+
+<input type="hidden" name="name" value="{{ name }}">
+</form>
+<!-- /form -->
+
+{% endblock %}
