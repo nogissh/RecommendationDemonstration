@@ -14,8 +14,12 @@ where
   code = {}
 '''
 
+# 引数を取り込み
+import sys
+target = sys.argv[1]
+
 # query
-cur.execute(base_sql.format('1111'))
+cur.execute(base_sql.format(target))
 
 # set array
 namelist = []
