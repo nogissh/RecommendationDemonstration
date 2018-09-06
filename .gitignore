@@ -3,3 +3,6 @@ db.sqlite3
 
 # 
 app/makeprofile/migrations/*.py
+
+# clustring
+result.json
