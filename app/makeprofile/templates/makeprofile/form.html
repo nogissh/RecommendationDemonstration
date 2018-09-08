@@ -10,7 +10,7 @@
 <!-- /statement -->
 
 <!-- form -->
-<form action="{% url 'makeprofile:regist' %}" method="get">
+<form action="{% url 'makeprofile:regist' %}" method="post">
 
 <div class="panel tm8">
 <h2>好きな食べもの</h2>
@@ -71,6 +71,7 @@
 
 <input type="hidden" name="code" value="{{ content.code }}">
 <input type="hidden" name="name" value="{{ content.name }}">
+{% csrf_token %}
 </form>
 <!-- /form -->
 

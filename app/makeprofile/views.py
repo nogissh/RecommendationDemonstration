@@ -16,8 +16,8 @@ def form(request):
 
   # name
   content = {
-    'code': request.GET.get('code', ''),
-    'name': request.GET.get('name', ''),
+    'code': request.POST.get('code', ''),
+    'name': request.POST.get('name', ''),
   }
 
   # 未回答を拒否
@@ -35,12 +35,12 @@ def regist(request):
 
   # to dict
   content = {
-    'code': request.GET.get('code', ''),
-    'name': request.GET.get('name', None),
-    'q1'  : request.GET.get('q1', None),
-    'q2'  : request.GET.get('q2', None),
-    'q3'  : request.GET.get('q3', None),
-    'q4'  : request.GET.get('q4', None),
+    'code': request.POST.get('code', ''),
+    'name': request.POST.get('name', None),
+    'q1'  : request.POST.get('q1', None),
+    'q2'  : request.POST.get('q2', None),
+    'q3'  : request.POST.get('q3', None),
+    'q4'  : request.POST.get('q4', None),
     'q5'  : 1,
   }
 
