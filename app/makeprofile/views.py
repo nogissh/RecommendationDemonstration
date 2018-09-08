@@ -21,8 +21,8 @@ def form(request):
   }
 
   # 未回答を拒否
-  if '' in content.values():
-    message = make_message(False, "情報は全て入力してください。")
+  if '' == content['name']:
+    message = make_message(False, "名前を入力してください。")
     return render(request, 'makeprofile/error.html', message)
 
   # メッセージを生成
@@ -35,7 +35,7 @@ def regist(request):
 
   # to dict
   content = {
-    'code': request.GET.get('code', None),
+    'code': request.GET.get('code', ''),
     'name': request.GET.get('name', None),
     'q1'  : request.GET.get('q1', None),
     'q2'  : request.GET.get('q2', None),

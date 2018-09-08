@@ -2,7 +2,7 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-  code = models.CharField(null=False, max_length=200)
+  code = models.CharField(null=True, max_length=200)
   name = models.CharField(null=False, max_length=200)
   q1 = models.IntegerField(null=False, default=99)
   q2 = models.IntegerField(null=False, default=99)
